@@ -1,4 +1,4 @@
-var instance = M.Carousel.init({
+  var instance = M.Carousel.init({
     fullWidth: true
   });
 
@@ -18,3 +18,17 @@ var instance = M.Carousel.init({
   $(document).ready(function(){
     $('.parallax').parallax();
   });
+
+
+  var instance = M.Tabs.init(el, options);
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.tabs').tabs();
+  });
+
+  var instance = M.Tabs.getInstance(elem);
+  instance.select('tab_id');
+  instance.updateTabIndicator();
+  instance.destroy();
