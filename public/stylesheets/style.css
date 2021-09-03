@@ -1,3 +1,13 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
 footer .icone2{
     margin-left: 20px;
 }
@@ -6,6 +16,7 @@ nav{
     position: fixed;
     z-index: 2;
 }
+
 
 .tabs{
     margin-top: 50px;
