@@ -19,6 +19,14 @@ header{
 }
 
 
+header li:hover{
+    background-color: #4db6ac;
+}
+
+header a:hover{
+    color: #fff;
+}
+
 .tabs{
     margin-top: 50px;
 }
