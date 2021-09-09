@@ -8,6 +8,10 @@ body {
     flex: 1 0 auto;
   }
 
+footer{
+    z-index: 2;
+}
+
 footer .icone2{
     margin-left: 20px;
 }
@@ -42,4 +46,112 @@ header a:hover{
 
 .tabs .indicator{
     background-color: #4db6ac;
+}
+
+#container_login{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    z-index: 2;
+}
+#container_login h1{
+    color: #26a69a;
+}
+
+#login_card{
+    align-items: center;
+    width: 450px;
+    padding: 10px;
+}
+#login_card span{
+    color: dimgrey;
+}
+
+
+#botoes_registrar{
+    display: flex;
+    justify-content: center;
+}
+#botoes_registrar .btn{
+    width: 150px;
+    text-align: center;
+    margin-left: 30px;
+
+}
+
+.box-area{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+
+.box-area li{
+    position: absolute; 
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: url(../images/pegada.png);
+    background-repeat: no-repeat;
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+}
+
+.box-area li:nth-child(1){
+    left: 86%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 1s;
+}
+.box-area li:nth-child(2){
+    left: 12%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+}
+
+.box-area li:nth-child(3){
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 1s;
+    animation-duration: 10.5s;
+}
+
+.box-area li:nth-child(4){
+    left: 42%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.box-area li:nth-child(5){
+    left: 65%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.box-area li:nth-child(6){
+    left: 25%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3.5s;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 1;
+    }
 }
