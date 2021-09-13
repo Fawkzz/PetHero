@@ -19,7 +19,7 @@ footer .icone2{
 header{
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 3;
 }
 
 
@@ -58,6 +58,9 @@ header a:hover{
     color: #26a69a;
 }
 
+#container_registrar h1{
+    color: #26a69a;
+}
 #login_card{
     align-items: center;
     width: 450px;
@@ -66,7 +69,20 @@ header a:hover{
 #login_card span{
     color: dimgrey;
 }
-
+#container_registrar{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    z-index: 2;
+}
+#registrar_card{
+    align-items: center;
+    width: 800px;
+    padding: 10px;
+}
+#registrar_card span{
+    color: dimgrey;
+}
 
 #botoes_registrar{
     display: flex;
@@ -78,7 +94,9 @@ header a:hover{
     margin-left: 30px;
 
 }
-
+#noticia{
+    margin-left: 2px;
+}
 .box-area{
    position: absolute;
    top: 0;
