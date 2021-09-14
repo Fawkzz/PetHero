@@ -16,13 +16,6 @@ footer .icone2{
     margin-left: 20px;
 }
 
-header{
-    position: sticky;
-    top: 0;
-    z-index: 3;
-}
-
-
 header li:hover{
     background-color: #4db6ac;
 }
@@ -67,8 +60,19 @@ header a:hover{
     padding: 10px;
 }
 #login_card span{
-    color: dimgrey;
+    color: rgb(139, 139, 139);
 }
+#registrar_card span{
+    color: rgb(139, 139, 139)
+}
+#login_card h1{
+    font-weight: 700;
+}
+
+#registrar_card h1{
+    font-weight: 700;
+}
+
 #container_registrar{
     display: flex;
     justify-content: center;
@@ -79,9 +83,6 @@ header a:hover{
     align-items: center;
     width: 800px;
     padding: 10px;
-}
-#registrar_card span{
-    color: dimgrey;
 }
 
 #botoes_registrar{

@@ -24,35 +24,35 @@
       
       <div class="col s12">
         <ul class="tabs">
-          <li class="tab col s3"><a class="active teal-text text-lighten-2" href="#test1">Todos os Pets</a></li>
-          <li class="tab col s3"><a class="teal-text text-lighten-2" href="#test2">Cachorro</a></li>
-          <li class="tab col s3"><a class="teal-text text-lighten-2" href="#test3">Gato</a></li>
+          <li class="tab col s3"><a class="active teal-text text-lighten-2" href="#todos">Todos os Pets</a></li>
+          <li class="tab col s3"><a class="teal-text text-lighten-2" href="#cachorro">Cachorro</a></li>
+          <li class="tab col s3"><a class="teal-text text-lighten-2" href="#gato">Gato</a></li>
         </ul>
       </div>
     
-      <div id="test1" class="col s12">
-       <% for(let i=0; i < pets.length; i++){ %> 
-        <div class="col s4">
-          <div class="card large">
-              <div class="card-image">
-              <img src=<%= pets[i].imagem %>>
-              
+      <div id="todos">
+          <% for(let i=0; i < pets.length; i++){ %>
+              <div class="col s12 m6 l4">
+                <div class="card large">
+                    <div class="card-image">
+                    <img src=<%= pets[i].imagem %>>
+                    
+                    </div>
+                    <div class="card-content">
+                    <span class="card-title black-text text-black"><%= pets[i].nome %></span>
+                    <p><%= pets[i].descricao%></p>
+                    </div>
+                    <div class="card-action">
+                    <a class="teal-text text-lighten-2" href="#">ADOTAR</a>
+                    </div>
+                </div>
               </div>
-              <div class="card-content">
-              <span class="card-title black-text text-black"><%= pets[i].nome %></span>
-              <p><%= pets[i].descricao%></p>
-              </div>
-              <div class="card-action">
-              <a class="teal-text text-lighten-2" href="#">ADOTAR</a>
-              </div>
-          </div>
-        </div>  
-       <% } %>
+          <% } %>
       </div>
-      <div id="test2" class="col s12">
+      <div id="cachorro">
             <% for (let index = 0; index < pets.length; index++){ %>
               <% if (pets[index].raca == "cachorro") { %>
-                <div class="col s4">
+                <div class="col s12 m6 l4">
                   <div class="card large">
                     <div class="card-image">
                     <img src=<%= pets[index].imagem %>>
@@ -68,13 +68,12 @@
                 </div>
               <%}%>
             <%} %>
-          
       </div>
-      <div id="test3" class="col s12">
+      <div id="gato">
         <% for (let index = 0; index < pets.length; index++){ %>
           <% if (pets[index].raca == "gato") { %>
-            <div class="col s4">
-                <div class="card large">
+            <div class="col s12 m6 l4">
+                <div class="card medium">
                     <div class="card-image">
                     <img src=<%= pets[index].imagem %>>
                     </div>
