@@ -5,6 +5,5 @@ var router = express.Router();
 
 
 router.get('/', loginController.index)
-router.get('/esqueceuSenha', loginController.index)
 
 module.exports = router;
