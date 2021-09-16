@@ -35,3 +35,84 @@ header{
 .tabs .indicator{
     background-color: #4db6ac;
 }
+
+.container {
+    width: 100%;
+    margin: 0 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.primeira_img {
+    display: flex;
+    justify-content: center;
+}
+
+.logada_Um img{
+    display: flex;
+    align-items: center;
+
+}
+
+.logada_Um {
+    text-align: center;
+    }
+
+.info_pet {
+    
+    width:100%;
+    height:100px;
+    
+           
+    }
+
+.lista_info {
+    display: flex;
+    width: 70%;
+    height: 20%;
+    text-align: center;
+    font-size: 30px;
+    justify-content: space-between;
+    
+}
+
+.texto_pet_logada {
+    font-size:23px;
+    line-height: 130%;
+    text-align: center ;
+}
+
+.cards_logada {
+    display: flex;
+    width: 100%;
+    height: 10px;
+    flex-direction: row;
+    align-content: stretch;
+    margin: 10px 10px 10px 10px;
+}
+
+.mapa_logada img{
+    width: 100%;
+    margin-top: 400px;
+}
+
+.botoes {
+    
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    margin: 10px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    border: 10px;
+     
+}
+
+.botoes_enviar {
+    display: flex;
+    width:20%;
+    justify-content: center;
+    align-items: center;
+}
