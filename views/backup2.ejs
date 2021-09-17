@@ -1,0 +1,28 @@
+<%- include("./partials/header") %>
+<main> 
+    <div class="row container">
+      <h2 class="header">Ferias de Animais</h2>
+      <ul class="collapsible avatar">
+        <% for(let i=0; i < feiras.length; i++){ %>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>
+            <span><%= feiras[i].titulo %></span>
+          </div>
+          <div class="collapsible-body">
+            <h4><%= feiras[i].titulo %></h4><br>
+            <h5>A feira</h5>
+            <p> <%= feiras[i].descricaoFeira %> </p> <br>
+            <h5>Perfil</h5>
+            <p>Setores: <%= feiras[i].setores %></p>
+            <p>Periodicidade: <%= feiras[i].periodicidade %></p>
+            <p>Alcance: <%= feiras[i].alcance %></p><br>
+            <h5>Nova Edição</h5>
+            <p><%= feiras[i].descricaoFeira %></p>                
+          </div>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+</main>
+
+<%- include("./partials/footer") %>
