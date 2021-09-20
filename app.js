@@ -11,6 +11,8 @@ var saibaMaisRouter = require('./routes/saibaMais');
 var feirasRouter = require('./routes/feiras');
 var cadastrarEventosRouter = require('./routes/cadastrarEventos');
 var eventosRouter = require('./routes/eventos');
+var cadastrarOngRouter = require('./routes/cadastrarOng');
+var esqueceuSenhaRouter = require('./routes/login');
 
 
 var app = express();
@@ -32,6 +34,8 @@ app.use('/saibaMais', saibaMaisRouter);
 app.use('/feiras', feirasRouter);
 app.use('/cadastrarEventos', cadastrarEventosRouter);
 app.use('/eventos', eventosRouter);
+app.use('/cadastrarOng', cadastrarOngRouter);
+app.use('/esqueceuSenha', esqueceuSenhaRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -18,28 +18,27 @@
                     <h1 class="center">Cadastrar Eventos</h1>
                     <p>Preencha todas os campos para registrar seu evento em nosso website.</p>
                   </div>
-                  
                   <div class="row">
                     <div class="input-field col s6 center">
-                      <input id="nome" type="text" class="validate" name="nome">
+                      <input id="nome" type="text" class="validate" name="nome" required>
                       <label for="nome">Nome do Evento</label>
                     </div>
                     <div class="input-field col s6 center">
-                        <input id="data" type="date" class="validate" name="data">
+                        <input id="data" type="date" class="validate" name="data" required>
                         <label for="data">Data do Evento</label>
                       </div>                     
                   </div>
                   <div class="row">
                     <div class="input-field col s4 center">
-                      <input id="pais" type="text" class="validate">
+                      <input id="pais" type="text" class="validate" name='pais' required>
                       <label for="pais">País</label>
                     </div>
                     <div class="input-field col s4 center">
-                        <input id="cidade" type="text" class="validate">
+                        <input id="cidade" type="text" class="validate" name='cidade' required>
                         <label for="cidade">Cidade</label>
                     </div>
                     <div class="input-field col s4 center">
-                        <input id="local" type="text" class="validate">
+                        <input id="local" type="text" class="validate" name="local" required>
                         <label for="local">Local</label>
                     </div>
                     
@@ -47,7 +46,7 @@
                  
                   <div class="row">                    
                     <div class="input-field col s6 center">
-                        <select>
+                        <select required>
                           <option value="" disabled selected>Periodicidade</option>
                           <option value="1">Anaual</option>
                           <option value="2">Semestral</option>
@@ -56,7 +55,7 @@
                           <option value="3">mensal</option>
                         </select>
                     </div>
-                    <div class="input-field col s6 center">
+                    <div class="input-field col s6 center" >
                         <select>
                           <option value="" disabled selected>Alcance</option>
                           <option value="1">Nacional</option>
@@ -80,14 +79,14 @@
                   </div>
                   <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="descricao" class="materialize-textarea"></textarea>
+                        <textarea id="descricao" class="materialize-textarea" name="dedscricao"></textarea>
                         <label for="descricao">Descrição</label>
                     </div>
                   </div>
                   <div class="file-field input-field">
                     <div class="btn">
                       <span class="logo_span">Logo</span>
-                      <input type="file">
+                      <input type="file" required>
                     </div>
                     <div class="file-path-wrapper">
                       <input class="file-path validate" type="text">
@@ -102,9 +101,6 @@
               </div>
         </div>
     </div>
-    <% if (salvou){%>
-      <span> SAVLOU CARAII</span>
-    <%}%>   
 </main>
 
 <%- include("./partials/footer") %>

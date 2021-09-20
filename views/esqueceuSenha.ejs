@@ -1,0 +1,38 @@
+<%- include("./partials/header") %>
+<main>
+    <div class="animation-area">
+      <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="container" id="container_login">
+        <div class="card" id="login_card">
+            <div class="row">
+                <form class="col s12">
+                  <div class="row center">
+                    <h1 class="center">Esqueceu sua senha?</h1>
+                    <span>Digite seu e-mail para recuperação de senha.</span>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="input-field col s12 center">
+                      <input id="email" type="email" class="validate">
+                      <label for="email">Email</label>
+                    </div>
+                  </div>                  
+                  <div class="row" id="botoes_registrar">
+                    <a href="../login" class="waves-effect teal lighten-2  btn">Voltar</a>
+                    <a class="waves-effect blue darken-1 btn">Enviar</a>
+                  </div>                 
+                </form>
+              </div>
+        </div>
+    </div>    
+</main>
+
+<%- include("./partials/footer") %>
