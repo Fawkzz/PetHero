@@ -1,0 +1,57 @@
+<%- include("./partials/header") %>
+<main>
+   
+  <div class="parallax-container">
+      <div class="parallax"><img src="./images/banner2.jpg"></div>
+    </div>
+    <div class="section white">
+      
+      <div class="row container">
+      
+        <a href="../cadastrarEventos"  data-position="left" class="btn-floating right btn-large waves-effect waves-light red btn tooltipped" data-tooltip="Adicionar novo evento"><i class="material-icons">add</i></a>
+        <h2 class="header">Ongs</h2>
+          <ul class="collection">
+            <% for(let i=0; i < ongs.length; i++){ %>
+              <li class="collection-item avatar">
+                <img class="circle" src=<%= ongs[i].imagem %>>
+                <span class="teal-text text-lighten-2"><%= ongs[i].nomeDaOng %></span>
+                <p class="grey-text "><%= ongs[i].cidade %><br>
+                <p class="grey-text "><%= ongs[i].estado %><br>
+                
+                </p>
+                <a href="#!" class="secondary-content btn modal-trigger"  data-target="modal<%= i %>">Detalhes</a>
+                
+                <div id="modal<%= i %>" class="modal">
+                    <div class="modal-content">
+                      <h4><%= ongs[i].nomeDaOng %></h4><br>
+                      <h5>Informações:</h5>
+                      <p><strong>E-mail: </strong><%= ongs[i].email %> </p>
+                      <p><strong>Telefone: </strong><%= ongs[i].telefone %> </p>
+                      <p><strong>Rua: </strong><%= ongs[i].logradouro %></p>
+                      <p><strong>Nº: </strong><%= ongs[i].numero %></p>
+                      <p><strong>Complemento: </strong><%= ongs[i].complemento %></p>
+                      <p><strong>Bairro: </strong><%= ongs[i].bairro %></p>
+                      <p><strong>Cidade: </strong><%= ongs[i].cidade %></p>
+                      <p><strong>Estado: </strong><%= ongs[i].estado %></p><br>
+                      <h5>Descrição:</h5>
+                      <p><%= ongs[i].descricao %></p>
+                    </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-close btn-flat">Fechar</a>
+                  </div>
+                </div>
+                
+              </li>
+            <% } %>
+          </ul>
+        
+      </div>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax"><img src="./images/banner.jpg"></div>
+    </div>
+        
+  
+</main>
+
+<%- include("./partials/footer") %>
