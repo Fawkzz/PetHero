@@ -194,6 +194,10 @@ h1, h4{
     animation-delay: 3.5s;
 }
 
+.deposito_doacao{
+    width: 3000px;
+}
+
 @keyframes animate {
     0%{
         transform: translateY(0) rotate(0deg);
