@@ -4,6 +4,10 @@ var router = express.Router();
 
 
 
-router.get('/', ongsController.index)
+
+router.post('/', ongsController.post)
+router.get('/cadastrar', ongsController.cadastrar)
+router.get('/listar', ongsController.listar)
+
 
 module.exports = router;   

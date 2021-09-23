@@ -1,5 +1,5 @@
 const ongsController = {
-    index: (req, res) => {
+    listar: (req, res) => {
     let ongs = [
         {        
             "nomeDaOng":"SOS ANIMAIS",
@@ -18,6 +18,17 @@ const ongsController = {
         }
         ]
        res.render("ongs", {ongs: ongs})
-    }
+    },
+    post: (req, res) => {
+        console.log(req.body)
+        res.render('cadastrarOng', {success: true, error: false})
+    },
+ 
+    cadastrar: (req, res) => {
+            res.render("cadastrarOng")
+    },
+
+    
+    
 }
 module.exports = ongsController;

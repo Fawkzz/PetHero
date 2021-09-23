@@ -2,14 +2,14 @@
 <main>
    
   <div class="parallax-container">
-      <div class="parallax"><img src="./images/banner2.jpg"></div>
+      <div class="parallax"><img src="../images/banner2.jpg"></div>
     </div>
     <div class="section white">
       
       <div class="row container">
       
-        <a href="../cadastrarEventos"  data-position="left" class="btn-floating right btn-large waves-effect waves-light red btn tooltipped" data-tooltip="Adicionar novo evento"><i class="material-icons">add</i></a>
-        <h2 class="header">Ongs</h2>
+        <a href="../ongs/cadastrar"  data-position="left" class="btn-floating right btn-large waves-effect waves-light red btn tooltipped" data-tooltip="Adicionar novo evento"><i class="material-icons">add</i></a>
+        <h1>Ongs</h1>
           <ul class="collection">
             <% for(let i=0; i < ongs.length; i++){ %>
               <li class="collection-item avatar">
@@ -40,18 +40,11 @@
                     <a href="#!" class="modal-close btn-flat">Fechar</a>
                   </div>
                 </div>
-                
               </li>
             <% } %>
           </ul>
-        
       </div>
     </div>
-    <div class="parallax-container">
-      <div class="parallax"><img src="./images/banner.jpg"></div>
-    </div>
-        
-  
 </main>
 
 <%- include("./partials/footer") %>
