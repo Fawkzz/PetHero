@@ -1,7 +1,7 @@
 const criarOngController = {
     post: (req, res) => {
         console.log(req.body)
-        res.render('cadastrarOng', {salvou: true, error: false})
+        res.render('cadastrarOng', {success: true, error: true})
     }
 }
 

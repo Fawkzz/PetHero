@@ -5,7 +5,7 @@ var router = express.Router();
 
 
 
-router.get('/index', homeController.index)
+router.get('/', homeController.index)
 
 
 module.exports = router;
