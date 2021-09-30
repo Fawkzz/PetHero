@@ -25,10 +25,11 @@ const ongsController = {
     },
  
     cadastrar: (req, res) => {
-            res.render("cadastrarOng")
-    },
-
-    
-    
+        const caminhoImagem = req.file.path;
+        listarOngs.push({
+            imagem: caminhoImagem
+        })
+        res.render("cadastrarOng")
+    }
 }
 module.exports = ongsController;

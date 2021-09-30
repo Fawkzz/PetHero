@@ -20,6 +20,12 @@ footer{
     z-index: 2;
 }
 
+
+.buttonListarEventos{
+    display: flex;
+    display: inline-block;
+}
+
 footer .icone2{
     margin-left: 20px;
 }
@@ -137,6 +143,7 @@ h1, h4{
    overflow: hidden;
 }
 
+
 .box-area li{
     position: absolute; 
     display: block;
@@ -197,6 +204,7 @@ h1, h4{
 .deposito_doacao{
     width: 3000px;
 }
+
 
 @keyframes animate {
     0%{

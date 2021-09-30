@@ -8,28 +8,34 @@
         <div class="row container">
         
           <a href="../eventos/cadastrar"  data-position="left" class="btn-floating right btn-large waves-effect waves-light red btn tooltipped" data-tooltip="Adicionar novo evento"><i class="material-icons">add</i></a>
-          <h1 class="header">Feiras de Animais</h1>
+          <h1 class="header">Eventos de Animais</h1>
             <ul class="collection">
-              <% for(let i=0; i < feiras.length; i++){ %>
+              <% for(let i=0; i < eventos.length; i++){ %>
                 <li class="collection-item avatar">
-                  <img class="circle" src=<%= feiras[i].imagem %>>
-                  <span class="teal-text text-lighten-2"><%= feiras[i].titulo %></span>
-                  <p class="grey-text "><%= feiras[i].segmento %><br>
-                  <p> <%= feiras[i].data %></p>
-                  </p>
+                  <% if("logo" in eventos[i]){ %>
+                  <img class="circle" src="<%= eventos[i].logo %>">
+                  <% } %>
+                  <span class="teal-text text-lighten-2"><%= eventos[i].titulo %></span>
+                  <p class="grey-text "><%= eventos[i].setores %><br>
+                  <p> <%= eventos[i].data %></p>
                   <a href="#!" class="secondary-content btn modal-trigger"  data-target="modal<%= i %>">Detalhes</a>
+                  <div class="buttonListarEventos">
+                    <a href="#!" class="btn-small teal lighten-2" id="testebutton" data-target="modal<%= i %>">Detalhes</a>
+                    <a href="/cadastrarEventos/editar<%= eventos[i].id %>" class="btn-small blue lighten-2">Editar</a>
+                    <a href="/cadastrarEventos/excluir<%= eventos[i].id %>" class="btn-small red lighten-2">Excluir</a>
+                  </div>
                   
                   <div id="modal<%= i %>" class="modal">
                       <div class="modal-content">
-                        <h4><%= feiras[i].titulo %></h4><br>
+                        <h4><%= eventos[i].titulo %></h4><br>
                         <h5>A feira</h5>
-                        <p> <%= feiras[i].descricaoFeira %> </p> <br>
-                        <h5>Perfil de <%= feiras[i].titulo %></h5>
-                        <p>Setores: <%= feiras[i].setores %></p>  <br>
-                        <p>Periodicidade: <%= feiras[i].periodicidade %></p>  <br>
-                        <p>Alcance: <%= feiras[i].alcance %></p>  <br>
-                        <h5></h5>Nova Edição <%= feiras[i].titulo %></h5>
-                        <p><%= feiras[i].descricaoFeira %></p>
+                        <p> <%= eventos[i].descricao %> </p> <br>
+                        <h5>Perfil de <%= eventos[i].titulo %></h5>
+                        <p>Setores: <%= eventos[i].setores %></p>  <br>
+                        <p>Periodicidade: <%= eventos[i].periodicidade %></p>  <br>
+                        <p>Alcance: <%= eventos[i].alcance %></p>  <br>
+                        <h5></h5>Nova Edição <%= eventos[i].titulo %></h5>
+                        <p><%= eventos[i].descricao %></p>
                       </div>
                     <div class="modal-footer">
                       <a href="#!" class="modal-close btn-flat">Fechar</a>

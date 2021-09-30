@@ -10,4 +10,4 @@ router.get('/cadastrar', ongsController.cadastrar)
 router.get('/listar', ongsController.listar)
 
 
-module.exports = router;   
+module.exports = router;

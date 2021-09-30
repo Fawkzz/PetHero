@@ -3,13 +3,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
 
 var indexRouter = require('./routes');
 var loginRouter = require('./routes/login');
-var registrarRouter = require('./routes/registrar');
 var saibaMaisRouter = require('./routes/saibaMais');
 var eventosRouter = require('./routes/eventos');
-var esqueceuSenhaRouter = require('./routes/login');
 var ongsRouter = require('./routes/ongs');
 var doacaoRouter = require('./routes/doacao');
 
@@ -20,6 +19,11 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(session({
+  secret: "projetoExpressPethero",
+  resave:true,
+  saveUninitialized:true
+}))
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -28,10 +32,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
-app.use('/registrar', registrarRouter);
 app.use('/saibaMais', saibaMaisRouter);
 app.use('/eventos', eventosRouter);
-app.use('/esqueceuSenha', esqueceuSenhaRouter);
 app.use('/ongs', ongsRouter);
 app.use('/doacao', doacaoRouter);
 

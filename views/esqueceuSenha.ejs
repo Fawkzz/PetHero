@@ -18,16 +18,23 @@
                     <h1 class="center">Esqueceu sua senha?</h1>
                     <span>Digite seu e-mail para recuperação de senha.</span>
                   </div>
-                  
+                  <% if(typeof alert != 'undefined'){ %>
+                    <% alert.forEach(function(error){ %>
+                      <div class="materialert error">
+                        <div class="material-icons">error_outline</div>
+                        <%= error.msg %>
+                      </div>
+                    <% }) %>
+                  <% } %>
                   <div class="row">
                     <div class="input-field col s12 center">
-                      <input id="email" type="email" class="validate">
+                      <input id="email" type="email" class="validate" name="email">
                       <label for="email">Email</label>
                     </div>
                   </div>                  
                   <div class="row" id="botoes_registrar">
                     <a href="../login" class="waves-effect teal lighten-2  btn">Voltar</a>
-                    <a class="waves-effect blue darken-1 btn">Enviar</a>
+                    <button class="waves-effect blue darken-1 btn" type="submit">Enviar</button>
                   </div>                 
                 </form>
               </div>

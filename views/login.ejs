@@ -13,28 +13,35 @@
     <div class="container" id="container_login">
         <div class="card" id="login_card">
             <div class="row">
-                <form class="col s12">
+                <form class="col s12" action="/login" method="post">
                   <div class="row center">
                     <h1 class="center">LOGIN</h1>
                     <span>Entre com seu e-mail e senha, caso não tenha faça o registro.</span>
                   </div>
-                  
+                  <% if(typeof alert != 'undefined'){ %>
+                    <% alert.forEach(function(error){ %>
+                      <div class="materialert error">
+                        <div class="material-icons">error_outline</div>
+                        <%= error.msg %>
+                      </div>
+                    <% }) %>
+                  <% } %>
                   <div class="row">
                     <div class="input-field col s12 center">
-                      <input id="email" type="email" class="validate">
+                      <input id="email" type="email" class="validate" name="email">
                       <label for="email">Email</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="input-field col s12">
-                      <input id="password" type="password" class="validate">
+                      <input id="password" type="password" class="validate" name="password">
                       <label for="password">Senha</label>
                       <a href="../login/esqueceuSenha" class="left">Esqueceu Sua Senha?</a>
                     </div>
                   </div>
                   <div class="row" id="botoes_registrar">
-                    <a href="../registrar" class="waves-effect teal lighten-2  btn">Criar Conta</a>
-                    <a class="waves-effect blue darken-1 btn">Entrar</a>
+                    <a href="../login/registrarLogin" class="waves-effect teal lighten-2  btn">Criar Conta</a>
+                    <button type="submit" class="waves-effect blue darken-1 btn">Entrar</button>
                   </div>                 
                 </form>
               </div>
