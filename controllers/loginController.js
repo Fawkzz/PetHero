@@ -31,7 +31,7 @@ const loginController = {
         let listaDeErros = validationResult(req)
         if(!listaDeErros.isEmpty()){
             const alert = listaDeErros.array()
-            res.render("esqueceuSenha", {alert: alert})
+            return res.render("esqueceuSenha", {alert: alert})
         }
         const email = req.body.email;
 

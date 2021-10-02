@@ -17,7 +17,7 @@ const ongsController = {
             "descricao":"Instituição destinada a causa animal",
         }
         ]
-       res.render("ongs", {ongs: ongs})
+       res.render("listarOng", {ongs: ongs})
     },
     post: (req, res) => {
         console.log(req.body)
@@ -25,10 +25,10 @@ const ongsController = {
     },
  
     cadastrar: (req, res) => {
-        const caminhoImagem = req.file.path;
+       /* const caminhoImagem = req.file.path;
         listarOngs.push({
             imagem: caminhoImagem
-        })
+        })*/
         res.render("cadastrarOng")
     }
 }

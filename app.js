@@ -11,7 +11,8 @@ var saibaMaisRouter = require('./routes/saibaMais');
 var eventosRouter = require('./routes/eventos');
 var ongsRouter = require('./routes/ongs');
 var doacaoRouter = require('./routes/doacao');
-
+var quemSomosRouter = require('./routes/quemSomos');
+var contatoRouter = require('./routes/contato');
 
 var app = express();
 
@@ -36,6 +37,8 @@ app.use('/saibaMais', saibaMaisRouter);
 app.use('/eventos', eventosRouter);
 app.use('/ongs', ongsRouter);
 app.use('/doacao', doacaoRouter);
+app.use('/quemSomos', quemSomosRouter);
+app.use('/contato', contatoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

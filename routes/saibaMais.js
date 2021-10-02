@@ -6,4 +6,5 @@ var router = express.Router();
 
 router.get('/', saibaMaisController.index)
 
+
 module.exports = router;
