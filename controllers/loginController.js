@@ -19,6 +19,7 @@ const loginController = {
         if (usuarioLogado != null) {
             req.session.usuario_logado= true
             res.redirect("/")
+            console.log(usuarioLogado)
         }else{
             res.render("login")
         }
@@ -35,7 +36,7 @@ const loginController = {
         }
         const email = req.body.email;
 
-        eventos.push({
+        usuarios.push({
             email: email
         })
         res.render("esqueceuSenha")

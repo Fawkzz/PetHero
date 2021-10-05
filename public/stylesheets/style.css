@@ -12,6 +12,11 @@ main {
     padding: 100px;
 }
 
+.nav-wrapper {
+    z-index: 5;
+    position: fixed;
+}
+
 .saibaMais .card{
     height:800px;
 }
