@@ -12,16 +12,25 @@
     </div>
     <div class="container" id="container_eventos">
         <div class="card" id="registrar_card_eventos">
+
+          <% if(typeof alert != 'undefined'){ %>
+            <% alert.forEach(function(error){ %>
+              <div class="materialert error">
+                <div class="material-icons">error_outline</div>
+                <%= error.msg %>
+              </div>
+            <% }) %>
+          <% } %>
             <div class="row">
-                <form class="col s12" method="post" action="/criarOng" enctype="multipart/form-data">
+                <form class="col s12" method="post" action="/ongs/cadastrar" enctype="multipart/form-data">
                   <div class="row center">
                     <h1 class="center">Cadastrar Ongs</h1>
                     <p>Preencha todas os campos para registrar sua Ong em nosso website.</p>
                   </div>
                   <div class="row">
                     <div class="input-field col s6 center">
-                      <input id="ong" type="text" class="validate" name="ong" required>
-                      <label for="ong">Nome da Ong</label>
+                      <input id="nomeDaOng" type="text" class="validate" name="nomeDaOng" required>
+                      <label for="nomeDaOng">Nome da Ong</label>
                     </div>
                     <div class="input-field col s6">
                         <select multiple required>
@@ -86,16 +95,16 @@
                   <div class="row">
                     <div class="input-field col s12">
                         <textarea id="descricao" class="materialize-textarea" name="dedscricao"></textarea>
-                        <label for="descricao"1>Descrição</label>
+                        <label for="descricao">Descrição</label>
                     </div>
                   </div>
                   <div class="file-field input-field">
                     <div class="btn">
                       <span class="logo_span">Logo</span>
-                      <input type="file" required>
+                      <input type="file">
                     </div>
                     <div class="file-path-wrapper">
-                      <input class="file-path validate" type="text">
+                      <input class="file-path validate" type="text" name="logo" multiple required>
                     </div>
                   </div>
                   <div class="row" id="botoes_registrar">                  

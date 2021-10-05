@@ -1,0 +1,53 @@
+<%- include("./partials/header") %>
+  <main>
+      <div class="parallax-container">
+        <div class="parallax"><img src="../images/wow!.jpg"></div>
+      </div>
+      <div class="section white">
+        
+        <div class="row container">
+        
+          <a href="../ongs/cadastrar"  data-position="left" class="btn-floating right btn-large waves-effect waves-light red btn tooltipped" data-tooltip="Adicionar nova ong"><i class="material-icons">add</i></a>
+          <h1 class="header">Ongs de Animais</h1>
+            <ul class="collection">
+              <% for(let i=0; i < ongs.length; i++){ %>
+                <li class="collection-item avatar">
+                  <% if("logo" in ongs[i]){ %>
+                  <img class="circle" src="<%= ongs[i].logo%>">
+                  <% } %>
+                  <span class="teal-text text-lighten-2"><%= ongs[i].nomeDaOng %></span>
+                  <p class="grey-text "><%= ongs[i].estado %><br>
+                  <p> <%= ongs[i].cidade %></p>
+                  <a href="#!" class="secondary-content btn modal-trigger"  data-target="modal<%= i %>">Detalhes</a>
+                  <div class="buttonListarongs">
+                    <a href="#!" class="btn-small teal lighten-2" id="testebutton" data-target="modal<%= i %>">Detalhes</a>
+                    <a href="/cadastrarongs/editar<%= ongs[i].id %>" class="btn-small blue lighten-2">Editar</a>
+                    <a href="/cadastrarongs/excluir<%= ongs[i].id %>" class="btn-small red lighten-2">Excluir</a>
+                  </div>
+                  
+                  <div id="modal<%= i %>" class="modal">
+                      <div class="modal-content">
+                        <h4><%= ongs[i].nomeDaOng %></h4><br>
+                        <h5>A Ong</h5>
+                        <p> <%= ongs[i].descricao %> </p> <br>
+                        <h5>Perfil de <%= ongs[i].nomeDaOng %></h5>
+                        <p>E-mail: <%= ongs[i].email %></p>  <br>
+                        <p>Telefone: <%= ongs[i].telefone %></p>  <br>
+                        <p>Estado: <%= ongs[i].estado %></p>  <br>
+                        <p>Cidade: <%= ongs[i].cidade %></p>  <br>
+                        <p>Bairro: <%= ongs[i].bairro %></p>  <br>
+                        <p><%= ongs[i].descricao %></p>
+                      </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-close btn-flat">Fechar</a>
+                    </div>
+                  </div>
+                  
+                </li>
+              <% } %>
+            </ul>
+          
+        </div>
+      </div>
+  </main>
+<%- include("./partials/footer") %>
