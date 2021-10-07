@@ -17,21 +17,6 @@ const {validationResult} = require('express-validator');
             "descricao":"Instituição destinada a causa animal",
         }
         ]
-<<<<<<< Updated upstream
-       res.render("listarOng", {ongs: ongs})
-    },
-    post: (req, res) => {
-        console.log(req.body)
-        res.render('cadastrarOng', {success: true, error: false})
-    },
- 
-    cadastrar: (req, res) => {
-       /* const caminhoImagem = req.file.path;
-        listarOngs.push({
-            imagem: caminhoImagem
-        })*/
-        res.render("cadastrarOng")
-=======
 const ongsController = {
     viewForm: (req, res) => {
        res.render("cadastrarOngs", {sucess: false, error: false})
@@ -80,7 +65,6 @@ const ongsController = {
     excluir: (req, res) => {
         console.log(req.body)
         res.render('cadastrarOngs', {ong: ongExcluida})
->>>>>>> Stashed changes
     }
 }
 module.exports = ongsController;

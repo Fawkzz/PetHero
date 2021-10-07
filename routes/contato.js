@@ -1,13 +1,4 @@
 var express = require('express');
-<<<<<<< Updated upstream
-const contatoController = require('../controllers/contatoController');
-var router = express.Router();
-
-
-
-router.get('/', contatoController.index)
-
-=======
 const multer  = require('multer');
 const path = require('path')
 const storage = multer.diskStorage({
@@ -32,6 +23,5 @@ router.get('/listar', contatosController.listar)
 router.get('/editar', contatosController.editar)
 router.post('/editar/:id', contatosController.editar)
 router.delete('/excluir', contatosController.excluir)
->>>>>>> Stashed changes
 
 module.exports = router;
