@@ -25,6 +25,10 @@ footer{
     z-index: 2;
 }
 
+#adionarPet{
+    margin-top: 50px;
+}
+
 
 .buttonListarEventos{
     display: flex;

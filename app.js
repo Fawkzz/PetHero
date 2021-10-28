@@ -13,6 +13,10 @@ var ongsRouter = require('./routes/ongs');
 var doacaoRouter = require('./routes/doacao');
 var quemSomosRouter = require('./routes/quemSomos');
 var contatoRouter = require('./routes/contato');
+var petsRouter = require('./routes/pets');
+
+//var passaport = require("passaport")
+//require("./config/auth")(passaport)
 
 
 var app = express();
@@ -40,6 +44,7 @@ app.use('/ongs', ongsRouter);
 app.use('/doacao', doacaoRouter);
 app.use('/quemSomos', quemSomosRouter);
 app.use('/contato', contatoRouter);
+app.use('/pets', petsRouter);
 
 
 // catch 404 and forward to error handler

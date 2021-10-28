@@ -10,51 +10,6 @@
         <li></li>
       </ul>
     </div>
-<<<<<<< Updated upstream
-    <div class="container" id="container_registrar">
-        <div class="card" id="registrar_card">
-            <div class="row">
-                <form class="col s12" action="/login/registrarLogin" method="post">
-                  <div class="row center">
-                    <h1 class="center">ENTRE EM CONTATO</h1>
-                    <span>Entre contato conosco que em breve iremos retorna.</span>
-                  </div>
-                  <% if(typeof alert != 'undefined'){ %>
-                    <% alert.forEach(function(error){ %>
-                      <div class="materialert error">
-                        <div class="material-icons">error_outline</div>
-                        <%= error.msg %>
-                      </div>
-                    <% }) %>
-                  <% } %>
-                  <div class="row">
-                    <div class="input-field col s12 center">
-                      <input id="nome" type="text" class="validate" name="nome">
-                      <label for="nome">Nome</label>
-                    </div>
-                    <div class="input-field col s12 center">
-                        <input id="sobrenome" type="text" class="validate" name="sobrenome">
-                        <label for="sobrenome">Sobrenome</label>
-                    </div>
-                    <div class="input-field col s12 center">
-                        <input id="email" type="text" class="validate" name="email">
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="input-field col s12 center">
-                        <input id="telefone" type="text" class="validate" name="telefone">
-                        <label for="telefone">Telefone</label>
-                    </div>
-                  </div>
-                
-                  <div class="row" id="botoes_registrar">                  
-                    <a href="../" class="waves-effect teal lighten-2  btn">Voltar</a>                    
-                    <button class="waves-effect blue darken-1 btn" type="submit">Confirmar</button>
-                  </div>              
-                </form>
-              </div>
-        </div>
-    </div>    
-=======
     <div class="container" id="container_eventos">
         <div class="card" id="registrar_card_eventos">
 
@@ -72,50 +27,42 @@
                     <h1 class="center">Contatos</h1>
                     <p>Preencha o formulário e nos envie um e-mail.</p>
                   </div>
-                  
-                    <div class="input-field col s4 center">
+                  <div class="row">
+                    <div class="input-field col s6 center">
                       <input id="nome" type="text" class="validate" name="nome" required>
                       <label for="nome">Nome</label>
                     </div>
-                    <div class="row">                    
-                        <div class="input-field col s4 center">
-                            <select id="tipo_msg" name="tipo_msg" required>
-                              <option value="" disabled selected>Tipo de mensagem</option>
-                              <option value="duvida">Dúvida</option>
-                              <option value="sugestao">Sugestão</option>
-                              <option value="reclamacao">Reclamação</option>
-                              <option value="elogio">Elogio</option> 
-                              <option value="outros">Outros</option>                             
-                            </select>
-                        </div>                   
-                  </div>
+                                      
+                    <div class="input-field col s6 center">
+                        <select id="tipo_msg" name="tipo_msg" required>
+                          <option value="" disabled selected>Tipo de mensagem</option>
+                          <option value="duvida">Dúvida</option>
+                          <option value="sugestao">Sugestão</option>
+                          <option value="reclamacao">Reclamação</option>
+                          <option value="elogio">Elogio</option> 
+                          <option value="outros">Outros</option>                             
+                        </select>
+                    </div>
+                  </div>                  
+                  
                   <div class="row">                    
-                    <div class="input-field col s4 center">
+                    <div class="input-field col s6 center">
                         <input id="email" type="text" class="validate" name="email" required>
                         <label for="email">Email</label>
                     </div>                                       
-                  </div>
-                  <div class="row">
-                    <div class="input-field col s4 center">
+                  
+                  
+                    <div class="input-field col s6 center">
                       <input id="telefone" type="text" class="validate" name='telefone' required>
                       <label for="telefone">Telefone</label>
                     </div>                                                                          
-                  </div>                  
-                  <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="descricao" class="materialize-textarea" name="dedscricao"></textarea>
-                        <label for="descricao">Descrição</label>
-                    </div>
+                  </div>            
+                  
+                  <div class="input-field col s12">
+                      <textarea id="descricao" class="materialize-textarea" name="dedscricao"></textarea>
+                      <label for="descricao">Mensagem</label>
                   </div>
-                  <div class="file-field input-field">
-                    <div class="btn">
-                      <span class="logo_span">Logo</span>
-                      <input type="file">
-                    </div>
-                    <div class="file-path-wrapper">
-                      <input class="file-path validate" type="text" name="logo" multiple required>
-                    </div>
-                  </div>
+
                   <div class="row" id="botoes_registrar">                  
                     <a href="" class="waves-effect teal lighten-2  btn">Voltar</a>
                     <button class="waves-effect blue darken-1 btn"> Enviar</button>
@@ -124,7 +71,6 @@
             </div>
         </div>
     </div>
->>>>>>> Stashed changes
 </main>
 
 <%- include("./partials/footer") %>

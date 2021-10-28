@@ -1,6 +1,7 @@
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
-const usuarios = []
+const usuarios = [];
+const { Usuario } = require('../models') 
 
 const loginController = {
     loginView: (req, res) => {

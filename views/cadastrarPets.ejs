@@ -1,0 +1,117 @@
+<%- include("./partials/header") %>
+<main>
+    <div class="animation-area">
+      <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="container" id="container_eventos"> 
+      <div class="card" id="registrar_card_eventos"> 
+      
+          <% if(typeof alert != 'undefined'){ %>
+            <% alert.forEach(function(error){ %>
+              <div class="materialert error">
+                <div class="material-icons">error_outline</div>
+                <%= error.msg %>
+              </div>
+            <% }) %>
+          <% } %>
+            <div class="row">
+              <form class="col s12" method="post" action="/eventos/cadastrar" enctype="multipart/form-data">
+                <div class="row center">
+                  <h1 class="center">Cadastrar Pets</h1>
+                  <p>Preencha todas os campos para registrar o pet.</p>                 
+                </div>
+                <div class="row">
+                  <div class="input-field col s6 center">
+                    <input id="nomePet" type="text" class="validate" name="nomePet" required maxlength="40">
+                    <label for="nomePet">Nome do Pet</label>
+                  </div>
+                  <div class="input-field col s6 center">
+                      <input id="data" type="date" class="validate" name="data" required>
+                      <label for="data">Data de nascimento</label>
+                    </div>                     
+                </div>
+                <div class="row">
+                  <div class="input-field col s6 center">
+                    <input id="Estado" type="text" class="validate" name="Estado" required maxlength="40">
+                    <label for="Estado">Estado</label>
+                  </div>
+                  <div class="input-field col s6 center">
+                    <input id="cidade" type="text" class="validate" name="cidade" required maxlength="40">
+                    <label for="cidade">Cidade</label>
+                    </div>                     
+                </div>
+                <div class="row">
+                  <div class="input-field col s6 center">
+                    <input id="raca" type="text" class="validate" name='raca' required maxlength="40">
+                    <label for="raca">Raça</label>
+                  </div>
+                  <div class="input-field col s6 center">
+                      <input id="ong" type="text" class="validate" name='ong' required maxlength="40">
+                      <label for="ong">Ong Responsàvel</label>
+                  </div>
+                </div>
+                <div class="row">                    
+                  <div class="input-field col s6 center">
+                      <select multiple id="Vacinas" name="vacinas" required>
+                        <option value="" disabled selected>Vacinas</option>
+                        <option value="Anaual">Anaual</option>
+                        <option value="Semestral">Semestral</option>
+                        <option value="Trimestral">Trimestral</option>
+                        <option value="Bimensal">Bimensal</option>
+                        <option value="mensal">Mensal</option>
+                      </select>
+                  </div>
+                  <div class="input-field col s6 center" >
+                      <select id="castrado" name="castrado" required>
+                        <option value="" disabled selected>Castrado</option>
+                        <option value="Nacional">Sim</option>
+                        <option value="Internacional">Nao</option>
+                      </select>
+                  </div>                
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <select multiple id="caracteristica" name="caracteristica" required>
+                      <option value="" disabled selected>Caracteristica</option>
+                      <option value="Docil">Docil</option>
+                      <option value="Bravo">Bravo</option>
+                      <option value="Brincalhao">Brincalhao</option>
+                      <option value="Adaptado para AP">Adaptado para AP</option>
+                      <option value="Adaptado para Casa">Adaptado para Casa</option>
+                      <option value="Cao de guarda">Cao de guarda</option>
+                      <option value="Sociavel">Sociavel</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="descricao" class="materialize-textarea" name="descricao" required></textarea>
+                    <label for="descricao">Mais detalhes</label>
+                  </div>
+                </div>
+                <div class="file-field input-field">
+                  <div class="btn">
+                    <span class="logo_span">Foto do Pet</span>
+                    <input type="file">
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text"  name="logo" required>
+                  </div>
+                </div>   
+                <div class="row" id="botoes_registrar">                  
+                  <a href="../eventos/listar" class="waves-effect teal lighten-2  btn">Voltar</a>
+                  <button type="submit" class="waves-effect blue darken-1 btn"> Confirmar</button>
+                </div>              
+              </form>
+            </div>
+      </div>
+    </div>
+</main>
+<%- include("./partials/footer") %>
